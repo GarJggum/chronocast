@@ -1,0 +1,129 @@
+{
+  "$schema": "https://cdn.scalar.com/schema/scalar-config.json",
+  "subdomain": "orchestra",
+  "siteMeta": {
+    "favicon": "https://utfs.io/f/lKo6VaP8kaqVN0l5gFv4RxZaLwSkvEXPYuo98sp0Gtm5DjTH",
+    "title": "Orchestra",
+    "description":"Cognitive Architecture",
+    "ogImage": "https://utfs.io/f/lKo6VaP8kaqV56n5xQJhNRfrE6Qe1FKVbdY9iOas0IwUDu42"
+  },
+  "guides": [
+    {
+      "name": "Orchestra",
+      "sidebar": [
+        {
+          "path": "docs/src/home.md",
+          "type": "page"
+        },
+        {
+          "path": "docs/src/tasks.md",
+          "type": "page"
+        },
+        {
+          "path": "docs/src/agents.md",
+          "type": "page"
+        },
+        {
+          "path": "docs/src/multi-agent-teams.md",
+          "type": "page"
+        },
+        {
+          "path": "docs/src/agentic-tool-use.md",
+          "type": "page"
+        },
+        {
+          "path": "docs/src/orchestration.md",
+          "type": "page"
+        },
+        {
+          "name": "Tools",
+          "type": "folder",
+          "children": [
+            {
+              "path": "docs/src/tools/amadeus_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/audio_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/calculator_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/conversation_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/embeddings_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/faiss_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/file_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/fred_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/github_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/langchain_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/pinecone_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/text_splitters.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/web_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/wikipedia_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/tools/yahoo_finance_tools.md",
+              "type": "page"
+            },
+            {
+              "path": "docs/src/custom_tools.md",
+              "type": "page"
+            }
+          ]
+        },
+        {
+          "path": "docs/src/faq.md",
+          "type": "page"
+        },
+        {
+          "path": "docs/src/llms.md",
+          "type": "page"
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "publishOnMerge": true,
+  "siteConfig": {
+    "logo": {
+      "darkMode": "https://utfs.io/f/lKo6VaP8kaqVJPtdA2EzQjuIZeG5LtSRDsEcBb970lrfKyqF",
+      "lightMode": "https://utfs.io/f/lKo6VaP8kaqVN0l5gFv4RxZaLwSkvEXPYuo98sp0Gtm5DjTH"
+    },
+    "footer": ""
+  },
+  "customDomain": "docs.orchestra.org"
+}

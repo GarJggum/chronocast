@@ -1,0 +1,138 @@
+[tool.poetry]
+name = "chronocast"
+version = "0.0.24"
+description = "Chronocast SDK empowers creators to build and stream AI-powered interactive experiences without coding expertise"
+readme = "README.md"
+packages = [{ include = "chronocast", from = "src" }]
+license = "Apache 2.0"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "*"
+pydantic = ">=2.0"
+anthropic = "*"
+openai = ">=1.0"
+cohere = "*"
+beautifulsoup4 = "*"
+tqdm = "*"
+python-dotenv = "*"
+PyYAML = "*"
+ollama = "*"
+lxml = "*"
+halo = "*"
+groq = "*"
+numpy = "*"
+faiss-cpu = "*"
+pinecone = "*"
+sentence_splitter = "*"
+igraph = "*"
+leidenalg = "*"
+fake-useragent = "*"
+google-generativeai = "*"
+tzdata = "^2024.2"
+
+[tool.poetry.extras]
+langchain_tools = [
+    "langchain-core",
+    "langchain-community",
+    "langchain-openai"
+]
+matplotlib_tools = [
+    "matplotlib"
+]
+yahoo_finance_tools = [
+    "yfinance",
+    "yahoofinance",
+    "pandas"
+]
+fred_tools = [
+    "fredapi",
+    "pandas"
+]
+audio_tools = [
+    "pygame",
+    "elevenlabs"
+]
+stripe_tools = [
+    "stripe-agent-toolkit"
+]
+
+[tool.poetry.dependencies.yfinance]
+version = "*"
+optional = true
+
+[tool.poetry.dependencies.yahoofinance]
+version = "*"
+optional = true
+
+[tool.poetry.dependencies.langchain-core]
+version = "*"
+optional = true
+
+[tool.poetry.dependencies.langchain-community]
+version = "*"
+optional = true
+
+[tool.poetry.dependencies.langchain-openai]
+version = "*"
+optional = true
+
+[tool.poetry.dependencies.matplotlib]
+version = "*"
+optional = true
+
+[tool.poetry.dependencies.stripe-agent-toolkit]
+version = "*"
+optional = true
+
+[tool.poetry.dependencies.elevenlabs]
+version = "*"
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0.0,<9.0.0"
+black = ">=23.0,<25.0"
+isort = ">=5.0,<6.0"
+mypy = ">=1.0,<2.0"
+ruff = "^0.8.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/mainframecomputer/orchestra/"
+"Bug Tracker" = "https://github.com/mainframecomputer/orchestra/issues"
+"Documentation" = "https://orchestra.org"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[tool.ruff]
+line-length = 100

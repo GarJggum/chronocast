@@ -1,0 +1,40 @@
+name: Python Package Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        export PATH="$HOME/.local/bin:$PATH"
+
+    - name: Install dependencies
+      working-directory: ./packages/python
+      run: poetry install
+
+    - name: Build package
+      working-directory: ./packages/python
+      run: poetry build
+
+    - name: Publish to PyPI
+      working-directory: ./packages/python
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_KEY }}
+      run: poetry publish --username $TWINE_USERNAME --password $TWINE_PASSWORD
+
