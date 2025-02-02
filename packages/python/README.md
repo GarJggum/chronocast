@@ -110,13 +110,6 @@ Chronocast supports a wide range of AI models:
 - Claude 3 Sonnet
 - Claude 3 Haiku
 
-### Google
-- Gemini Pro
-- Gemini Ultra
-
-### Mistral
-- Mixtral
-- Large
 
 ## Built-in Tools
 
